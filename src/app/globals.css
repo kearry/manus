@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-rgb: 10, 10, 20;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+    min-height: 100vh;
+}
+
+.animation-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+    animation-delay: 0.4s;
+}
+
+.dots-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.dots-flow div {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    animation: flow 1.4s infinite ease-in-out both;
+}
+
+.dots-flow div:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dots-flow div:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes flow {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.4);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+.markdown {
+    color: #1f2937;
+    /* text-gray-800 */
+}
+
+.markdown h1 {
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 700;
+    /* font-bold */
+    margin-top: 1.5rem;
+    /* mt-6 */
+    margin-bottom: 1rem;
+    /* mb-4 */
+}
+
+.markdown h2 {
+    font-size: 1.25rem;
+    /* text-xl */
+    font-weight: 600;
+    /* font-semibold */
+    margin-top: 1.25rem;
+    /* mt-5 */
+    margin-bottom: 0.75rem;
+    /* mb-3 */
+}
+
+.markdown h3 {
+    font-size: 1.125rem;
+    /* text-lg */
+    font-weight: 500;
+    /* font-medium */
+    margin-top: 1rem;
+    /* mt-4 */
+    margin-bottom: 0.5rem;
+    /* mb-2 */
+}
+
+.markdown p {
+    margin-bottom: 1rem;
+    /* mb-4 */
+    line-height: 1.625;
+    /* leading-relaxed */
+}
+
+.markdown ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    /* ml-6 */
+    margin-bottom: 1rem;
+    /* mb-4 */
+}
+
+.markdown ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    /* ml-6 */
+    margin-bottom: 1rem;
+    /* mb-4 */
+}
+
+.markdown li {
+    margin-bottom: 0.25rem;
+    /* mb-1 */
+}
+
+.markdown code {
+    font-family: monospace;
+    font-size: 0.875rem;
+    /* text-sm */
+    background-color: #f3f4f6;
+    /* bg-gray-100 */
+    padding-left: 0.25rem;
+    /* px-1 */
+    padding-right: 0.25rem;
+    padding-top: 0.125rem;
+    /* py-0.5 */
+    padding-bottom: 0.125rem;
+    border-radius: 0.25rem;
+    /* rounded */
+}
+
+.markdown pre {
+    font-family: monospace;
+    font-size: 0.875rem;
+    /* text-sm */
+    background-color: #f3f4f6;
+    /* bg-gray-100 */
+    padding: 0.75rem;
+    /* p-3 */
+    border-radius: 0.25rem;
+    /* rounded */
+    margin-bottom: 1rem;
+    /* mb-4 */
+    overflow: auto;
+}
+
+.markdown blockquote {
+    padding-left: 1rem;
+    /* pl-4 */
+    border-left-width: 4px;
+    border-color: #d1d5db;
+    /* border-gray-300 */
+    font-style: italic;
+}
+
+.markdown a {
+    color: #4f46e5;
+    /* text-indigo-600 */
+}
+
+.markdown a:hover {
+    text-decoration: underline;
+}
+
+/* Terminal-like styles for Manus's Computer */
+.terminal {
+    background-color: #111827;
+    /* bg-gray-900 */
+    color: #e5e7eb;
+    /* text-gray-200 */
+    font-family: monospace;
+    padding: 1rem;
+    /* p-4 */
+    border-radius: 0.375rem;
+    /* rounded-md */
+    overflow: auto;
+}
+
+.terminal-line {
+    margin-bottom: 0.25rem;
+    /* mb-1 */
+}
+
+.terminal-prompt {
+    color: #34d399;
+    /* text-green-400 */
+    margin-right: 0.5rem;
+    /* mr-2 */
+}
+
+.terminal-command {
+    color: #ffffff;
+    /* text-white */
+}
+
+.terminal-output {
+    color: #d1d5db;
+    /* text-gray-300 */
+    padding-left: 1rem;
+    /* pl-4 */
+}
+
+.terminal-error {
+    color: #f87171;
+    /* text-red-400 */
+}
+
+.terminal-warning {
+    color: #fbbf24;
+    /* text-yellow-400 */
+}
+
+.terminal-success {
+    color: #34d399;
+    /* text-green-400 */
+}
